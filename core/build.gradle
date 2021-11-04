@@ -1,0 +1,23 @@
+apply from: "$project.rootDir/base-lib.gradle"
+
+apply plugin: 'dagger.hilt.android.plugin'
+
+dependencies {
+    api "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
+
+    api 'androidx.core:core-ktx:1.7.0'
+    api 'androidx.collection:collection-ktx:1.1.0'
+
+    // Coroutines
+    api "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion"
+    api "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion"
+
+    // Hilt
+    api "com.google.dagger:hilt-android:$hiltVersion"
+    api "androidx.hilt:hilt-work:$androidXHiltVersion"
+    kapt "com.google.dagger:hilt-android-compiler:$hiltVersion"
+    kapt "androidx.hilt:hilt-compiler:$androidXHiltVersion"
+
+    // Timber
+    api 'com.jakewharton.timber:timber:5.0.1'
+}

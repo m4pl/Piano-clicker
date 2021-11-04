@@ -1,0 +1,18 @@
+apply from: "$project.rootDir/base-lib.gradle"
+
+apply plugin: "androidx.navigation.safeargs.kotlin"
+apply plugin: 'dagger.hilt.android.plugin'
+
+dependencies {
+    implementation project(':core')
+    implementation project(':core-ui')
+
+    // Navigation
+    implementation "androidx.navigation:navigation-fragment-ktx:$navigationVersion"
+    implementation "androidx.navigation:navigation-ui-ktx:$navigationVersion"
+
+    // Hilt
+    implementation "com.google.dagger:hilt-android:$hiltVersion"
+    kapt "com.google.dagger:hilt-android-compiler:$hiltVersion"
+    kapt "androidx.hilt:hilt-compiler:$androidXHiltVersion"
+}

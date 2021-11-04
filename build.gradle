@@ -1,0 +1,52 @@
+buildscript {
+    ext {
+        kotlinVersion = '1.5.31'
+
+        hiltVersion = '2.39.1'
+        androidXHiltVersion = '1.0.0'
+
+        coroutinesVersion = '1.5.1'
+
+        lifecycleVersion = '2.4.0'
+
+        navigationVersion = '2.3.5'
+
+        globalCompileSdkVersion = 31
+        globalMinSdkVersion = 21
+        globalTargetSdkVersion = 31
+
+        def versionMajor = 0
+        def versionMinor = 0
+        def versionPatch = 0
+
+        def versionBuild = 0
+
+        final buildDate = new Date().format('yyyy_MM_dd_HHmm')
+
+        globalVersionName = "$versionMajor.$versionMinor.$versionPatch-$buildDate"
+        globalVersionCode = 1_000_000_000 + 1000 * (10000 * versionMajor + 100 * versionMinor + versionPatch) + versionBuild
+    }
+
+    repositories {
+        mavenCentral()
+        google()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.2.2'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+        classpath "com.google.dagger:hilt-android-gradle-plugin:$hiltVersion"
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$navigationVersion"
+
+        classpath 'com.diffplug.spotless:spotless-plugin-gradle:5.16.0'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+    }
+}
