@@ -5,7 +5,7 @@ buildscript {
         hiltVersion = '2.39.1'
         androidXHiltVersion = '1.0.0'
 
-        coroutinesVersion = '1.5.1'
+        coroutinesVersion = '1.5.2'
 
         lifecycleVersion = '2.4.0'
 

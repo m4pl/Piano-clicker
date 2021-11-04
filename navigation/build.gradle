@@ -7,9 +7,8 @@ dependencies {
     implementation project(':core')
     implementation project(':core-ui')
 
-    // Navigation
-    implementation "androidx.navigation:navigation-fragment-ktx:$navigationVersion"
-    implementation "androidx.navigation:navigation-ui-ktx:$navigationVersion"
+    // Cicerone
+    api 'com.github.terrakok:cicerone:6.6'
 
     // Hilt
     implementation "com.google.dagger:hilt-android:$hiltVersion"
