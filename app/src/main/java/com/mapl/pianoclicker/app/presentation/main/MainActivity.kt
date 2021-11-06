@@ -30,6 +30,7 @@ class MainActivity : AppCompatActivity() {
         setupNavigator()
         setupViewModel()
     }
+
     override fun onResumeFragments() {
         super.onResumeFragments()
         navigatorHolder.setNavigator(navigator)

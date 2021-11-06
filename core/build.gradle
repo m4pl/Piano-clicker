@@ -8,6 +8,9 @@ dependencies {
     api 'androidx.core:core-ktx:1.7.0'
     api 'androidx.collection:collection-ktx:1.1.0'
 
+    // WorkManager
+    api 'androidx.work:work-runtime-ktx:2.7.0'
+
     // Coroutines
     api "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion"
     api "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion"
