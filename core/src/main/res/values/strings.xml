@@ -1,3 +1,3 @@
 <resources>
-    <string name="accessibility_service_description">Это позволит записывать нажатия на устройстве.</string>
+    <string name="accessibility_service_description">Это позволит воспроизводить нажатия на устройстве.</string>
 </resources>

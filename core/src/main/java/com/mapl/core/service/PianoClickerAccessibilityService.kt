@@ -4,8 +4,7 @@ import android.accessibilityservice.AccessibilityService
 import android.view.accessibility.AccessibilityEvent
 import timber.log.Timber
 
-
-class PianoClickerAccessibilityService: AccessibilityService() {
+class PianoClickerAccessibilityService : AccessibilityService() {
 
     override fun onAccessibilityEvent(event: AccessibilityEvent?) {
         Timber.d("--> AccessibilityService onAccessibilityEvent")

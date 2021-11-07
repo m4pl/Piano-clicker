@@ -47,8 +47,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupViewModel() {
-        viewModel
-            .permission
-            .observe(this) {}
+        viewModel.openRecordsScreen()
     }
 }
