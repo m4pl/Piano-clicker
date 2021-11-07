@@ -8,13 +8,15 @@ import com.mapl.core_ui.presentation.permission.Permissions.WRITE_STORAGE
 import com.mapl.core_ui.presentation.setting.Settings.ACCESSIBILITY_ENABLED
 import com.mapl.core_ui.presentation.setting.SettingsController
 import com.mapl.navigation.domain.interactor.OpenAccessibilitySettingsScreen
+import com.mapl.recorder.domain.interactor.navigation.StartRecorder
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
-class RecordsViewModel @Inject constructor(
+class UserRecordsViewModel @Inject constructor(
     private val permissionController: PermissionController,
     private val settingsController: SettingsController,
+    private val startRecorder: StartRecorder,
     private val openAccessibilitySettingsScreen: OpenAccessibilitySettingsScreen
 ) : ViewModel() {
 
@@ -24,9 +26,7 @@ class RecordsViewModel @Inject constructor(
         when {
             !isStorageGranted() -> requestStoragePermissions()
             !isAccessibilitySettingsGranted() -> openAccessibilitySettingsScreen.exec()
-            else -> {
-                // TODO: Start record service
-            }
+            else -> startRecorder.exec()
         }
     }
 

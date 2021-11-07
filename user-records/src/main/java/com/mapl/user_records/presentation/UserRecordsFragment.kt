@@ -7,14 +7,14 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.mapl.core_ui.util.viewbinding.viewBinding
 import com.mapl.user_records.R
-import com.mapl.user_records.databinding.FragmentRecordsBinding
+import com.mapl.user_records.databinding.FragmentUserRecordsBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class RecordsFragment : Fragment(R.layout.fragment_records) {
+class UserRecordsFragment : Fragment(R.layout.fragment_user_records) {
 
-    private val binding by viewBinding(FragmentRecordsBinding::bind)
-    private val viewModel: RecordsViewModel by viewModels()
+    private val binding by viewBinding(FragmentUserRecordsBinding::bind)
+    private val viewModel: UserRecordsViewModel by viewModels()
 
     private val requestPermissionsLauncher =
         registerForActivityResult(ActivityResultContracts.RequestMultiplePermissions()) { map ->
@@ -51,6 +51,6 @@ class RecordsFragment : Fragment(R.layout.fragment_records) {
     }
 
     companion object {
-        fun newInstance(): RecordsFragment = RecordsFragment()
+        fun newInstance(): UserRecordsFragment = UserRecordsFragment()
     }
 }

@@ -47,6 +47,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupViewModel() {
-        viewModel.openRecordsScreen()
+        viewModel.openUserRecordsScreen()
     }
 }

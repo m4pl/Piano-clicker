@@ -1,5 +1,5 @@
 package com.mapl.navigation.domain.interactor
 
-interface OpenRecordsScreen {
+interface OpenUserRecordsScreen {
     fun exec()
 }

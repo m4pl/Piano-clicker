@@ -12,7 +12,6 @@ dependencies {
     implementation project(':core')
     implementation project(':core-ui')
     implementation project(':navigation')
-    implementation project(':recorder')
 
     // Hilt
     implementation "com.google.dagger:hilt-android:$hiltVersion"
