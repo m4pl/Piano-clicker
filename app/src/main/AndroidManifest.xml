@@ -28,7 +28,7 @@
         </activity>
 
         <service
-            android:name="com.mapl.core.service.PianoClickerAccessibilityService"
+            android:name="com.mapl.user_records.service.PianoClickerAccessibilityService"
             android:enabled="true"
             android:exported="false"
             android:label="Piano clicker"
